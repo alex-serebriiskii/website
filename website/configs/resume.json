@@ -1,0 +1,17 @@
+{
+    "Name" : "Test Name",
+    "Title" : "Test Title",
+    "Summary": "Test Summary",
+    "ContactInfo": [{"Phone": "123-456-7890"},{"Email":"Test@test.com"}],
+    "Jobs" :[
+        {
+            "Title": "Test Job1"
+        },
+        {
+            "Title": "Test Job2"
+        }
+    ],
+    "Skills" : ["Sleeping, Eating"],
+    "Certs" : ["International Certification in Sleeping 2019"],
+    "Projects": ["Sleepinator1000", "Sleepinator2000"]
+}

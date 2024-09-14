@@ -1,0 +1,13 @@
+@using Website.Data.Models
+<h1> Resume</h1>
+<p>@Model.Name</p>
+<p>@Model.Title</p>
+@for(int i = 0; i< Model.Jobs.Count; i++)
+{
+    <Job model="@Model.Jobs[i]"></Job>
+}
+
+@code{
+    [Parameter]
+    public ResumeModel Model{get;set;}
+}

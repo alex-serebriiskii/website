@@ -1,3 +1,21 @@
 ﻿@page "/"
+@using Website.Data.Services.Interfaces
+@using Website.Shared.Components.Resume;
+@attribute [StreamRendering(true)]
+@inject ResumeViewModel vm
 
 <h1> Test</h1>
+<Resume Model="@vm.ResumeModel"></Resume>
+
+@code{
+    private int timeCalled = 0;
+    private bool showResume = false;
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+    }
+    protected override void OnAfterRender(bool firstRender)
+    {
+
+    }
+}

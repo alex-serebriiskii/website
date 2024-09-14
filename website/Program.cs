@@ -1,11 +1,16 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
+using Website.Data.Services;
+using Website.Data.Services.Interfaces;
+using Website.ViewModels;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
+builder.Services.AddSingleton<IResumeService,ResumeService>();
+builder.Services.AddScoped<ResumeViewModel>();
 
 var app = builder.Build();
 
