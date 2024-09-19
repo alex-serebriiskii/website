@@ -2,12 +2,36 @@
 <h1> Resume</h1>
 <p>@Model.Name</p>
 <p>@Model.Title</p>
+<p>@Model.Summary</p>
+@for(int i = 0; i< Model.ContactInfo.Length; i++)
+{
+    <p>@Model.ContactInfo[i].Item1.ToString() + @Model.ContactInfo[i].Item2.ToString()</p>
+}
 @for(int i = 0; i< Model.Jobs.Count; i++)
 {
     <Job model="@Model.Jobs[i]"></Job>
 }
+@foreach(var skill in Model.Skills)
+{
+    <p>@skill</p>
+}
+@if(Model.Certs.Any())
+{
+    foreach(var cert in Model.Certs)
+    {
+        <p>@cert</p>
+    }
+}
+@if(Model.Projects.Any())
+{
+    foreach(var project in Model.Projects)
+    {
+        <p>@project</p>
+    }
+}
 
 @code{
+    //TODO implement better way of order preservation so foreach loops can be used
     [Parameter]
     public ResumeModel Model{get;set;}
 }
