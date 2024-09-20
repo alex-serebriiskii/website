@@ -3,10 +3,7 @@
 <p>@Model.Name</p>
 <p>@Model.Title</p>
 <p>@Model.Summary</p>
-@for(int i = 0; i< Model.ContactInfo.Length; i++)
-{
-    <p>@Model.ContactInfo[i].Item1.ToString() + @Model.ContactInfo[i].Item2.ToString()</p>
-}
+
 @for(int i = 0; i< Model.Jobs.Count; i++)
 {
     <Job model="@Model.Jobs[i]"></Job>
