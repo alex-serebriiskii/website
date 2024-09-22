@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
-using MudBlazor.Services;
 using Website.Data.Services;
 using Website.Data.Services.Interfaces;
 using Website.ViewModels;
@@ -10,7 +9,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddMudServices();
 builder.Services.AddSingleton<IResumeService,ResumeService>();
 builder.Services.AddScoped<ResumeViewModel>();
 
